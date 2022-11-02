@@ -56,11 +56,7 @@ export const login = async (req: Request, res: Response) => {
 }
 
 export const logout = (req: Request, res: Response) => {
-    req.session.destroy(() => {
-        console.log("sessão encerrada");
-    });
-    req.session.id = 'undefined';
-    res.redirect('/');
+    
 }
 
 export const listUser = async (req: Request, res: Response) => {
