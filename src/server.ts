@@ -3,9 +3,6 @@ import path from 'path';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import session from 'express-session';
-import visiterRoutes from './routes/visiterRoutes';
-import doormanRoutes from './routes/doormanRoutes';
-import visitRoutes from './routes/visitRoutes';
 import userRoutes from './routes/userRoutes';
 
 dotenv.config();
@@ -29,9 +26,6 @@ server.use(session({
 
 server.get('/ping', (req: Request, res: Response) => res.json({ pong: true }));
 
-server.use(visiterRoutes);
-server.use(doormanRoutes);
-server.use(visitRoutes);
 server.use(userRoutes);
 
 server.use((req: Request, res: Response) => {
