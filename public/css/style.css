@@ -1,0 +1,13 @@
+@media (max-width: 576px) {
+    body {
+        font-size: 15px;
+    }
+    .table {
+        font-size:12px;
+    }
+
+    .table .btn {
+        font-size: 10px;
+        padding: 5px;
+    }
+}
